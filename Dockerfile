@@ -1,4 +1,4 @@
-FROM nginx:stable-alpine
+FROM nginx:stable
 ENV DEBIAN_FRONTEND noninteractive
 
 COPY nginx.conf /etc/nginx/nginx.conf
