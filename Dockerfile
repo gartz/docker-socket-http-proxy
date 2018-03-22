@@ -1,9 +1,8 @@
-FROM nginx:1.7
+FROM nginx:stable-alpine
 ENV DEBIAN_FRONTEND noninteractive
 
-ADD nginx.conf /etc/nginx.conf
+COPY nginx.conf /etc/nginx/nginx.conf
 
-EXPOSE 4242
+EXPOSE 2375
 
-CMD ["/usr/local/sbin/nginx"]
-
+CMD nginx
